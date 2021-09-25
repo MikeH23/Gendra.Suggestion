@@ -29,9 +29,9 @@ public class suggestionImp implements ISuggestionRepository{
         //region variables
         ItemResponse itemResponse =  new ItemResponse();
         /** ruta archivo local*/
-        //String strRuta = "src\\main\\resources\\cities_canada-usa.tsv";
+        String strRuta = "src/main/resources/data/cities_canada-usa.tsv";
         /** ruta archivo nube */
-        String strRuta = "/application/BOOT-INF/classes/data/cities_canada-usa.tsv";//"BOOT-INF/classes!/org/resources/cities_canada-usa.tsv";
+        //String strRuta = "/application/BOOT-INF/classes/data/cities_canada-usa.tsv";//"BOOT-INF/classes!/org/resources/cities_canada-usa.tsv";
         List<citiesResponse> lstResponse = new ArrayList<>();
         List<citiesDTO> lstFilterCities = new ArrayList<>();
         Double dblLatitude;
