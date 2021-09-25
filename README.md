@@ -42,4 +42,8 @@ mvn spring-boot:run
 http://localhost:8080/gendra/suggestion/
 ```
 
+```URL Google Cloud
+https://imagesuggestion-geul7a4w7q-uc.a.run.app/gendra/suggestion/?q=London&longitude=-79.4163&latitude=43.70011
+```
+
 You can use postman to test the micro services.

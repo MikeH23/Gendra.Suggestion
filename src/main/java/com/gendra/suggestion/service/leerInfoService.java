@@ -13,6 +13,11 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -20,8 +25,9 @@ import java.util.Scanner;
 @Service
 public class leerInfoService {
 
-    public List<citiesDTO> leerArchivo(String strRuta){
+    public static final String Ruta_Cities = "~/cities_canada-usa.tsv";
 
+    public List<citiesDTO> leerArchivo(String strRuta){
         //region Variables
         ItemResponse itemResponse = new ItemResponse();
         List<String> lstNames = new ArrayList<String>();
