@@ -48,7 +48,7 @@ public class suggestionImp implements ISuggestionRepository{
                 if (latitud != null) {
                     dblLatitude = Double.valueOf(latitud);
                     dblLongitude = Double.valueOf(longitud);
-                    lstFilterCities = lstCities.stream().filter(x -> x.name.startsWith(pais) || (x.latitude <= dblLatitude || x.longitude <= dblLongitude)).collect(Collectors.toList());
+                    lstFilterCities = lstCities.stream().filter(x -> x.name.startsWith(pais) && (x.latitude <= dblLatitude || x.longitude <= dblLongitude)).collect(Collectors.toList());
                 } else {
                     lstFilterCities = lstCities.stream().filter(x -> x.name.startsWith(pais)).collect(Collectors.toList());
                 }
